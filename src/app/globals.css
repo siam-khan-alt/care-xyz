@@ -1,26 +1,44 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+   themes: light --default;
+ }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+ @plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  /* Primary: Emerald  */
+  --color-primary: #10B981; 
+  --color-primary-content: #ffffff;
+  
+  /* Secondary: Indigo  */
+  --color-secondary: #6366F1;
+  --color-secondary-content: #ffffff;
+
+  /* Accent: Rose  */
+  --color-accent: #F43F5E;
+  --color-accent-content: #ffffff;
+
+  /* Background Colors */
+  --base-100: #ffffff;
+  --base-200: #F8FAFC; 
+  --base-300: #F1F5F9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  
+  .heading-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#10B981] via-[#3B82F6] to-[#6366F1] font-extrabold tracking-tight;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .btn-gradient {
+    background: linear-gradient(135deg, #10B981 0%, #6366F1 100%);
+    @apply border-none text-white shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300;
+  }
+
+  .btn-gradient-warm {
+    background: linear-gradient(135deg, #F43F5E 0%, #FB923C 100%);
+    @apply border-none text-white shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300;
+  }
 }
