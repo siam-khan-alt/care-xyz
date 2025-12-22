@@ -42,3 +42,6 @@
     @apply border-none text-white shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300;
   }
 }
+:root {
+  font-family: var(--font-poppins), sans-serif;
+}
