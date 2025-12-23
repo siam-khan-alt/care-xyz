@@ -4,6 +4,7 @@ import { FaCheckCircle, FaAward } from "react-icons/fa";
 const About = () => {
   return (
     <section className="pt-10 bg-base-100 overflow-hidden">
+      <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-block px-4 py-1 rounded-full bg-base-200 shadow-sm border border-gray-100 mb-4">
             <span className="text-xs font-bold uppercase tracking-widest text-gray-500">Platform Mission</span>
@@ -69,6 +70,7 @@ const About = () => {
               Discover Our Story
             </button>
           </div>
+        </div>
         </div>
     </section>
   );

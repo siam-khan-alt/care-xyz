@@ -32,6 +32,7 @@ const ServicesHome = () => {
 
   return (
     <section className="py-10 bg-base-200/40">
+      <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-block px-4 py-1 rounded-full bg-white shadow-sm border border-gray-100 mb-4">
             <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Our Expertise</span>
@@ -73,6 +74,7 @@ const ServicesHome = () => {
               </Link>
             </div>
           ))}
+        </div>
         </div>
     </section>
   );

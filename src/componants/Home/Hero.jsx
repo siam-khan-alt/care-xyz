@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section className=" bg-base-100 flex items-center overflow-hidden py-10 lg:py-4">
-      <div className=" relative z-10">
+      <div className=" container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-6 border border-primary/20">
